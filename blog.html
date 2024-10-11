@@ -9,27 +9,41 @@
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <main class="bg-white max-h-fit p-2 min-[]:">
+    <main class="bg-white h-lvh p-2 ">
         <div class="join join-vertical w-full">
             <div class="collapse collapse-arrow join-item border-base-300 border">
               <input type="radio" name="my-accordion-4" checked="checked" />
-              <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+              <div class="collapse-title text-xl font-medium">What is the DOM in web development?</div>
               <div class="collapse-content">
-                <p>hello</p>
+                <p>The DOM is a tree-like structure representing a webpage's HTML, allowing developers to manipulate the content, structure, and style using JavaScript.</p>
               </div>
             </div>
             <div class="collapse collapse-arrow join-item border-base-300 border">
               <input type="radio" name="my-accordion-4" />
-              <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+              <div class="collapse-title text-xl font-medium">How can I select an element by its id in the DOM?</div>
               <div class="collapse-content">
-                <p>hello</p>
+                <p>You can select an element by its id using document.getElementById('yourId').</p>
               </div>
             </div>
             <div class="collapse collapse-arrow join-item border-base-300 border">
               <input type="radio" name="my-accordion-4" />
-              <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+              <div class="collapse-title text-xl font-medium">What’s the difference between innerHTML and textContent?</div>
               <div class="collapse-content">
-                <p>hello</p>
+                <p>innerHTML retrieves or sets HTML content inside an element, while textContent retrieves or sets plain text, ignoring HTML tags.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">How do I add a new element to the DOM?</div>
+              <div class="collapse-content">
+                <p>Use document.createElement('tag') to create a new element and appendChild() to add it to the DOM.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">How do I change the style of an element using the DOM?</div>
+              <div class="collapse-content">
+                <p>You can modify an element's style using the element.style property, for example: element.style.color = 'blue';.</p>
               </div>
             </div>
           </div>

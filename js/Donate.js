@@ -7,13 +7,11 @@ document.getElementById('btn-donate-noa').addEventListener('click',function(even
         alert('Please Give a Positive Number');
         return;
     }
-    showModal('btn-donate-noa');
-    
 
+    else{
 
-
-
-    const balance=getTextFieldValueById('fund-balance')
+        showModal('btn-donate-noa');
+        const balance=getTextFieldValueById('fund-balance')
     const mainBalanc=getTextFieldValueById('main-balance')
     
     
@@ -23,30 +21,31 @@ document.getElementById('btn-donate-noa').addEventListener('click',function(even
 
     document.getElementById('fund-balance').innerText=newFund;
     document.getElementById('main-balance').innerText=mainbalance;
-    
 
-    
+    }
+      
 //add to transection
-
-
-const div= document.createElement('div');
+// Create a new div
+const div = document.createElement('div');
 div.classList.add('bg-white');
-div.innerHTML =`
+
+// Get the current date and time
+const transactionTime = new Date().toString();
+
+// Set the inner HTML with the transaction amount and time
+div.innerHTML = `
 <div class="border border-black">
+  <h4 class="text-xl font-bold text-black">${donate} Taka is Donated for Flood at Noakhali, Bangladesh</h4>
+  <p class="text-gray-500">Date: ${transactionTime}</p>
+</div>
+`;
 
-<h4 class="text-xl font-bold text-black">${donate} Taka is Donate for Flood at Noakhali, Bangladesh</h4>
- 
-`
-
-
-
-
+// Append the div to the transaction container
 document.getElementById('Transection-container').appendChild(div);
-
 
 })
 
-
+//DOnate for feni
 document.getElementById('btn-donate-feni').addEventListener('click',function(event){
     event.preventDefault();
 
@@ -73,7 +72,31 @@ document.getElementById('btn-donate-feni').addEventListener('click',function(eve
 
     document.getElementById('fund-balance-feni').innerText=newFund;
     document.getElementById('main-balance').innerText=mainbalance;
+
+    // add transaction section
+// Create a new div
+const div = document.createElement('div');
+div.classList.add('bg-white');
+
+// Get the current date and time
+const transactionTime = new Date().toString();
+
+// Set the inner HTML with the transaction amount and time
+div.innerHTML = `
+<div class="border border-black">
+  <h4 class="text-xl font-bold text-black">${donate} Taka is Donated for Flood Relief in Feni, Bangladesh</h4>
+  <p class="text-gray-500">Date: ${transactionTime}</p>
+</div>
+`;
+
+// Append the div to the transaction container
+document.getElementById('Transection-container').appendChild(div);
+
+
+
 })
+
+//donate for quota
 
 document.getElementById('btn-donate-quota').addEventListener('click',function(event){
     event.preventDefault();
@@ -100,6 +123,26 @@ document.getElementById('btn-donate-quota').addEventListener('click',function(ev
 
     document.getElementById('fund-balance-quota').innerText=newFund ;
     document.getElementById('main-balance').innerText=mainbalance;
+
+        // add transaction section
+// Create a new div
+const div = document.createElement('div');
+div.classList.add('bg-white');
+
+// Get the current date and time
+const transactionTime = new Date().toString();
+
+// Set the inner HTML with the transaction amount and time
+div.innerHTML = `
+<div class="border border-black">
+  <h4 class="text-xl font-bold text-black">${donate} Taka is Aid for Injured in the Quota Movement</h4>
+  <p class="text-gray-500">Date: ${transactionTime}</p>
+</div>
+`;
+
+// Append the div to the transaction container
+document.getElementById('Transection-container').appendChild(div);
+
 })
 
 
