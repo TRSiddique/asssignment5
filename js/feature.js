@@ -29,9 +29,6 @@ function showSectionById(id){
 // common function for modal
 function showModal(id){
 
-// const modal = document.getElementById("myModal");
-// const openModalBtn = document.getElementById(id);
-// const closeModalBtn = document.getElementById("closeModal");
 
 document.getElementById(id).addEventListener('click',function(event){
     event.preventDefault();
@@ -48,27 +45,6 @@ document.getElementById("closeModal").addEventListener('click',function(event){
 
 })
 
+};
 
 
-
-
-
-// Open the modal when the button is clicked
-// openModalBtn.onclick = function() {
-//     modal.classList.remove("hidden");
-// };
-
-// // Close the modal when the "close confirmation" button is clicked
-// closeModalBtn.onclick = function() {
-//     modal.classList.add("hidden");
-// };
-
-// // Close the modal when clicking outside the modal content
-// window.onclick = function(event) {
-//     if (event.target == modal) {
-//         modal.classList.add("hidden");
-//     }
-// };
-
-
-}

@@ -3,16 +3,20 @@ document.getElementById('btn-donate-noa').addEventListener('click',function(even
 
 
     const donate = getInputValueById('Donate-noa')
+    const mainBalanc=getTextFieldValueById('main-balance')
     if(isNaN(donate)||donate<=0){
         alert('Please Give a Positive Number');
         return;
     }
-
-    else{
+    else if(mainBalanc<donate){
+        alert('You Have not sufficient Balance ')
+        return;
+    }       
+    else  {
 
         showModal('btn-donate-noa');
         const balance=getTextFieldValueById('fund-balance')
-    const mainBalanc=getTextFieldValueById('main-balance')
+    // const mainBalanc=getTextFieldValueById('main-balance')
     
     
     
@@ -55,24 +59,23 @@ document.getElementById('btn-donate-feni').addEventListener('click',function(eve
     const balance=getTextFieldValueById('fund-balance-feni')
     const mainBalanc=getTextFieldValueById('main-balance')
 
-    if(isNaN(donate)){
-        alert('Please Give a Number');
+    if(isNaN(donate)||donate<=0){
+        alert('Please Give a Positive Number');
         return;
     }
-    if(donate<=0)
-        {
-            alert('Please Give Positive Number');
-            return;
-        }
-
-
+    else if(mainBalanc<donate){
+        alert('You Have not sufficient Balance ')
+        return;
+    }       
+    else {
+        showModal('btn-donate-feni');
     const newFund = donate+balance;
     const mainbalance= mainBalanc-donate;
 
 
     document.getElementById('fund-balance-feni').innerText=newFund;
     document.getElementById('main-balance').innerText=mainbalance;
-
+    }
     // add transaction section
 // Create a new div
 const div = document.createElement('div');
@@ -107,23 +110,23 @@ document.getElementById('btn-donate-quota').addEventListener('click',function(ev
     const balance=getTextFieldValueById('fund-balance-quota')
     const mainBalanc=getTextFieldValueById('main-balance')
     
-    if(isNaN(donate)){
-        alert('Please Give a Number');
+    if(isNaN(donate)||donate<=0){
+        alert('Please Give a Positive Number');
         return;
     }
-    if(donate<=0)
-        {
-            alert('Please Give Positive Number');
-            return;
-        }
-
+    else if(mainBalanc<donate){
+        alert('You Have not sufficient Balance ')
+        return;
+    }       
+    else {
+        showModal('btn-donate-quota');
     const newFund = donate+balance;
     const mainbalance= mainBalanc-donate;
 
 
     document.getElementById('fund-balance-quota').innerText=newFund ;
     document.getElementById('main-balance').innerText=mainbalance;
-
+    }
         // add transaction section
 // Create a new div
 const div = document.createElement('div');
